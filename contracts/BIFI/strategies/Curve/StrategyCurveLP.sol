@@ -202,7 +202,7 @@ contract StrategyCurveLP is StratManager, FeeManager, GasThrottler {
     }
 
     // Adds liquidity to AMM and gets more LP tokens.
-    function addLiquidity() internal {
+    function _addLiquidity() internal {
         uint256 depositBal;
         uint256 depositNativeAmount;
         uint256 nativeBal = IERC20(native).balanceOf(address(this));
